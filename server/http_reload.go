@@ -61,7 +61,7 @@ func (c *Server) Reload(w http.ResponseWriter, r *http.Request) {
 			return
 		}
 		ParseConfig(CONST_CONF_FILE_NAME)
-		c.initComponent(true)
+		c.InitComponent(true)
 		result.Status = "ok"
 		w.Write([]byte(c.util.JsonEncodePretty(result)))
 		return

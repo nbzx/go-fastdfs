@@ -121,7 +121,7 @@ func InitServer() {
 	} else {
 		staticHandler = http.StripPrefix("/", http.FileServer(http.Dir(STORE_DIR)))
 	}
-	server.initComponent(false)
+	server.InitComponent(false)
 }
 
 func NewServer() *Server {
