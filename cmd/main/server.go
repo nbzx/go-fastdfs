@@ -11,10 +11,6 @@ import (
 	log "github.com/sjqzhang/seelog"
 )
 
-type Server struct {
-	server.Server
-}
-
 var (
 	logacc         log.LoggerInterface
 	staticHandler  http.Handler

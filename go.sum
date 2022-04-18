@@ -280,6 +280,8 @@ github.com/siddontang/goredis v0.0.0-20150324035039-760763f78400/go.mod h1:DDcKz
 github.com/siddontang/rdb v0.0.0-20150307021120-fc89ed2e418d/go.mod h1:AMEsy7v5z92TR1JKMkLLoaOQk++LVnOKL3ScbJ8GNGA=
 github.com/sirupsen/logrus v1.2.0/go.mod h1:LxeOpSwHxABJmUn/MG1IvRgCAasNZTLOkJPxbbu5VWo=
 github.com/sirupsen/logrus v1.4.2/go.mod h1:tLMulIdttU9McNUspp0xgXVQah82FyeX6MwdIuYE2rE=
+github.com/sjqzhang/go-fastdfs v1.4.3 h1:YMVDFlCT1NAYrW/fvN9FzV9V0IJ0FdfJyGl7yBRJUJI=
+github.com/sjqzhang/go-fastdfs v1.4.3/go.mod h1:EBTbCuovECSQ//A5OwlMfkzM6L3qZmkAbEUqx0RS9MY=
 github.com/sjqzhang/googleAuthenticator v0.0.0-20160926062737-f198f070e0b1 h1:bZULqukbZwF0dU3eMzHEJIRFd5g4esdunH2tSxb/3zM=
 github.com/sjqzhang/googleAuthenticator v0.0.0-20160926062737-f198f070e0b1/go.mod h1:3dZBu0iTIeYYTplN+E5OuVyZB7WVFG4CIFIkP8aCtOU=
 github.com/sjqzhang/goutil v0.0.0-20200618044433-2319148e0a46 h1:7rauZIvQ9NfSyMERVV3fGZod1JNS0gFiNbG2BOALmOw=

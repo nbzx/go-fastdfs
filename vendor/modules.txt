@@ -56,6 +56,13 @@ github.com/radovskyb/watcher
 github.com/shirou/gopsutil/v3/disk
 github.com/shirou/gopsutil/v3/internal/common
 github.com/shirou/gopsutil/v3/mem
+# github.com/sjqzhang/go-fastdfs v1.4.3
+## explicit
+github.com/sjqzhang/go-fastdfs/cmd/doc
+github.com/sjqzhang/go-fastdfs/cmd/server
+github.com/sjqzhang/go-fastdfs/cmd/version
+github.com/sjqzhang/go-fastdfs/doc
+github.com/sjqzhang/go-fastdfs/server
 # github.com/sjqzhang/googleAuthenticator v0.0.0-20160926062737-f198f070e0b1
 ## explicit
 github.com/sjqzhang/googleAuthenticator
@@ -91,10 +98,6 @@ github.com/syndtr/goleveldb/leveldb/table
 github.com/syndtr/goleveldb/leveldb/util
 # go.uber.org/automaxprocs v1.4.0
 ## explicit
-go.uber.org/automaxprocs
-go.uber.org/automaxprocs/internal/cgroups
-go.uber.org/automaxprocs/internal/runtime
-go.uber.org/automaxprocs/maxprocs
 # golang.org/x/sys v0.0.0-20210217105451-b926d437f341
 ## explicit
 golang.org/x/sys/internal/unsafeheader
