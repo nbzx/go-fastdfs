@@ -1,4 +1,4 @@
-module github.com/sjqzhang/go-fastdfs
+module github.com/nbzx/go-fastdfs
 
 go 1.16
 
