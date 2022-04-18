@@ -5,3 +5,4 @@ files/*
 conf/*
 build/*
 log/*
+/.vscode

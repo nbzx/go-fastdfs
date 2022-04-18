@@ -1,6 +1,7 @@
 package main
 
 import (
+	"context"
 	"fmt"
 	"log"
 	"os"
@@ -75,5 +76,6 @@ func main() {
 		}
 	}
 	InitServer(dataPath)
-	Start()
+	ctx := context.Background()
+	Start(ctx)
 }

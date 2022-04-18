@@ -1,6 +1,7 @@
 package server
 
 import (
+	"context"
 	"fmt"
 	"net/http"
 	"os"
@@ -17,6 +18,7 @@ import (
 )
 
 type Server struct {
+	srv            *http.Server
 	ldb            *leveldb.DB
 	logDB          *leveldb.DB
 	util           *goutil.Common
@@ -186,7 +188,7 @@ func NewServer() *Server {
 	return server
 }
 
-func (c *Server) Start() {
+func (c *Server) Start(ctx context.Context) {
 	go func() {
 		for {
 			c.CheckFileAndSendToPeer(c.util.GetToDay(), CONST_Md5_ERROR_FILE_NAME, false)
@@ -256,7 +258,7 @@ func (c *Server) Start() {
 		log.Error(err)
 		fmt.Println(err)
 	} else {
-		srv := &http.Server{
+		c.srv = &http.Server{
 			Addr:              Config().Addr,
 			Handler:           new(HttpHandler),
 			ReadTimeout:       time.Duration(Config().ReadTimeout) * time.Second,
@@ -264,12 +266,17 @@ func (c *Server) Start() {
 			WriteTimeout:      time.Duration(Config().WriteTimeout) * time.Second,
 			IdleTimeout:       time.Duration(Config().IdleTimeout) * time.Second,
 		}
-		err := srv.ListenAndServe()
+		err := c.srv.ListenAndServe()
 		log.Error(err)
 		fmt.Println(err)
 	}
 }
 
-func Start() {
-	server.Start()
+func (s *Server) Stop(ctx context.Context) {
+	log.Info("[HTTP] server stopping")
+	s.srv.Shutdown(ctx)
+}
+
+func Start(ctx context.Context) {
+	server.Start(ctx)
 }

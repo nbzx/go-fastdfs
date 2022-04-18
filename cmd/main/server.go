@@ -1,6 +1,7 @@
 package main
 
 import (
+	"context"
 	"fmt"
 	"net/http"
 	"os"
@@ -216,6 +217,6 @@ func InitServer(appDir string) {
 	serverInstance.InitComponent(false)
 }
 
-func Start() {
-	serverInstance.Start()
+func Start(ctx context.Context) {
+	serverInstance.Start(ctx)
 }
