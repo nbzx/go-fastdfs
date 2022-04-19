@@ -77,7 +77,7 @@ func main() {
 			return
 		}
 	}
-	server.ConfigServer(dataPath)
+	server.ConfigServer(":8080", dataPath)
 	ctx := context.Background()
 	server.StartServer(ctx)
 }

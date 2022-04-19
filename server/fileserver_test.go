@@ -1,6 +1,7 @@
 package server
 
 import (
+	"context"
 	json2 "encoding/json"
 	"fmt"
 	"io/ioutil"
@@ -373,7 +374,7 @@ func Test_main(t *testing.T) {
 
 			testCommonMap(t)
 			InitServer()
-			go Start()
+			go Start(context.Background())
 
 			time.Sleep(time.Second * 1)
 			testConfig(t)

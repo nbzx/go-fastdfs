@@ -188,7 +188,7 @@ func NewServer() *Server {
 	return server
 }
 
-func (c *Server) Start(ctx context.Context) {
+func (c *Server) Start(ctx context.Context) error {
 	go func() {
 		for {
 			c.CheckFileAndSendToPeer(c.util.GetToDay(), CONST_Md5_ERROR_FILE_NAME, false)
@@ -253,8 +253,9 @@ func (c *Server) Start(ctx context.Context) {
 	//}
 
 	fmt.Println("Listen on " + Config().Addr)
+	var err error
 	if Config().EnableHttps {
-		err := http.ListenAndServeTLS(Config().Addr, CONST_SERVER_CRT_FILE_NAME, CONST_SERVER_KEY_FILE_NAME, new(HttpHandler))
+		err = http.ListenAndServeTLS(Config().Addr, CONST_SERVER_CRT_FILE_NAME, CONST_SERVER_KEY_FILE_NAME, new(HttpHandler))
 		log.Error(err)
 		fmt.Println(err)
 	} else {
@@ -266,15 +267,16 @@ func (c *Server) Start(ctx context.Context) {
 			WriteTimeout:      time.Duration(Config().WriteTimeout) * time.Second,
 			IdleTimeout:       time.Duration(Config().IdleTimeout) * time.Second,
 		}
-		err := c.srv.ListenAndServe()
+		err = c.srv.ListenAndServe()
 		log.Error(err)
 		fmt.Println(err)
 	}
+	return err
 }
 
-func (s *Server) Stop(ctx context.Context) {
+func (s *Server) Stop(ctx context.Context) error {
 	log.Info("[HTTP] server stopping")
-	s.srv.Shutdown(ctx)
+	return s.srv.Shutdown(ctx)
 }
 
 func Start(ctx context.Context) {

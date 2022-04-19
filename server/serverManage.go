@@ -10,7 +10,11 @@ import (
 	log "github.com/sjqzhang/seelog"
 )
 
-func ConfigServer(appDir string) {
+var (
+	cfgJsonPort = strings.Replace(cfgJson, ":8080", "%s", 1)
+)
+
+func ConfigServer(defaultHttpAddr, appDir string) *Server {
 	DOCKER_DIR = os.Getenv("GO_FASTDFS_DIR")
 	if DOCKER_DIR == "" {
 		DOCKER_DIR = appDir
@@ -56,7 +60,7 @@ func ConfigServer(appDir string) {
 		if peers = os.Getenv("GO_FASTDFS_PEERS"); peers == "" {
 			peers = peer
 		}
-		cfg := fmt.Sprintf(cfgJson, peerId, peer, peers)
+		cfg := fmt.Sprintf(cfgJsonPort, defaultHttpAddr, peerId, peer, peers)
 		server.util.WriteFile(CONST_CONF_FILE_NAME, cfg)
 	}
 	if logger, err := log.LoggerFromConfigAsBytes([]byte(logConfigStr)); err != nil {
@@ -91,6 +95,7 @@ func ConfigServer(appDir string) {
 		staticHandler = http.StripPrefix("/", http.FileServer(http.Dir(STORE_DIR)))
 	}
 	server.initComponent(false)
+	return server
 }
 
 func StartServer(ctx context.Context) {
