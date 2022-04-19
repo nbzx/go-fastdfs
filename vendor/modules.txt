@@ -111,6 +111,3 @@ gopkg.in/Acconut/lockfile.v1
 # gopkg.in/yaml.v2 v2.4.0
 ## explicit
 gopkg.in/yaml.v2
-# github.com/tus/tusd/filestore v1.9.0 => github.com/sjqzhang/tusd v0.11.2-0.20220410081741-7abdc84
-# github.com/tus/tusd/limitedstore v1.9.0 => github.com/sjqzhang/tusd/limitedstore v0.11.2-0.20220410081741-5be9ded
-# github.com/tus/tusd/memorylocker v1.9.0 => github.com/sjqzhang/tusd/memorylocker v0.11.2-0.20220410081741-3f7efea
