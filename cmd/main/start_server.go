@@ -9,6 +9,8 @@ import (
 	"path/filepath"
 	"runtime"
 	"strings"
+
+	"github.com/nbzx/go-fastdfs/server"
 )
 
 // 获取当前执行文件绝对路径
@@ -75,7 +77,7 @@ func main() {
 			return
 		}
 	}
-	InitServer(dataPath)
+	server.ConfigServer(dataPath)
 	ctx := context.Background()
-	Start(ctx)
+	server.StartServer(ctx)
 }

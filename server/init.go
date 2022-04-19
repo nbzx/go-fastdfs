@@ -252,7 +252,7 @@ func (c *Server) initTus() {
 	mux.Handle(bigDir, http.StripPrefix(bigDir, h))
 }
 
-func (c *Server) InitComponent(isReload bool) {
+func (c *Server) initComponent(isReload bool) {
 	var (
 		ip string
 	)
