@@ -72,7 +72,7 @@ github.com/sjqzhang/goutil
 # github.com/sjqzhang/seelog v0.0.0-20180104061743-556439109558
 ## explicit
 github.com/sjqzhang/seelog
-# github.com/sjqzhang/tusd v0.0.0-20190220031306-a6a9d78ef54a
+# github.com/sjqzhang/tusd v0.11.2-0.20220410081741-7abdc84f0b85
 ## explicit
 github.com/sjqzhang/tusd
 github.com/sjqzhang/tusd/filestore
@@ -111,3 +111,6 @@ gopkg.in/Acconut/lockfile.v1
 # gopkg.in/yaml.v2 v2.4.0
 ## explicit
 gopkg.in/yaml.v2
+# github.com/tus/tusd/filestore v1.9.0 => github.com/sjqzhang/tusd v0.11.2-0.20220410081741-7abdc84
+# github.com/tus/tusd/limitedstore v1.9.0 => github.com/sjqzhang/tusd/limitedstore v0.11.2-0.20220410081741-5be9ded
+# github.com/tus/tusd/memorylocker v1.9.0 => github.com/sjqzhang/tusd/memorylocker v0.11.2-0.20220410081741-3f7efea
