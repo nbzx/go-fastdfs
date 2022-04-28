@@ -10,7 +10,7 @@ require (
 	github.com/eventials/go-tus v0.0.0-20200718001131-45c7ec8f5d59
 	github.com/go-ole/go-ole v1.2.5 // indirect
 	github.com/json-iterator/go v1.1.12
-	github.com/nbzx/tusd v0.11.3
+	github.com/nbzx/tusd v0.11.4
 	github.com/nfnt/resize v0.0.0-20180221191011-83c6a9932646
 	github.com/radovskyb/watcher v1.0.7
 	github.com/shirou/gopsutil/v3 v3.21.4
