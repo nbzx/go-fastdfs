@@ -8,8 +8,8 @@ import (
 	"time"
 
 	"github.com/astaxie/beego/httplib"
+	"github.com/nbzx/tusd"
 	log "github.com/sjqzhang/seelog"
-	"github.com/sjqzhang/tusd"
 )
 
 type hookDataStore struct {
@@ -53,7 +53,6 @@ type hookDataStore struct {
 //	}
 //	return store.DataStore.NewUpload(ctx, info)
 //}
-
 
 func (store hookDataStore) NewUpload(info tusd.FileInfo) (id string, err error) {
 	var (

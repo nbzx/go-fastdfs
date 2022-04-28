@@ -16,9 +16,9 @@ import (
 	"time"
 
 	"github.com/astaxie/beego/httplib"
+	"github.com/nbzx/tusd"
+	"github.com/nbzx/tusd/filestore"
 	log "github.com/sjqzhang/seelog"
-	"github.com/sjqzhang/tusd"
-	"github.com/sjqzhang/tusd/filestore"
 )
 
 func (c *Server) initTus() {

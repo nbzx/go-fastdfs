@@ -3,7 +3,7 @@ package version
 import (
 	"fmt"
 
-	"github.com/sjqzhang/go-fastdfs/server"
+	"github.com/nbzx/go-fastdfs/server"
 	"github.com/spf13/cobra"
 )
 

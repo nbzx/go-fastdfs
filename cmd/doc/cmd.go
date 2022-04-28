@@ -1,7 +1,7 @@
 package doc
 
 import (
-	"github.com/sjqzhang/go-fastdfs/doc"
+	"github.com/nbzx/go-fastdfs/doc"
 	"github.com/spf13/cobra"
 )
 
